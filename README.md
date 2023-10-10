@@ -8,3 +8,6 @@ This program is used to detect the retro-reflective targets using frame differen
     timing the image buffer refresh. 
   - DONE: Initial blob detection for goals of different colors
   - blob filtering and tracking
+  
+- [Image differencing - solution 1](https://github.com/Jarvis-X/Reflective_AimBot/blob/main/Goal_detection_frame_differencing_camera_test.py)
+  - It turns out waiting for a substantially long time (>> shutter/exposure time) after switching the LED can solve the rolling shutter problem. More to investigate...
