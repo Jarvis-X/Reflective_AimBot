@@ -335,12 +335,13 @@ def reflective_highlighter_2steps(verbose=True, edge_removal=True):
 
     img.negate()
     blobs = goal_blob_detection(img, goal_thresholds, verbose=verbose, mask=edge_mask)
+    sensor.dealloc_extra_fb()
     
     # show image on screen
+  
     if verbose:
         omv.disable_fb(False)
         img.flush()
-    sensor.dealloc_extra_fb()
     hold_up_for_sensor_refresh(time_last_snapshot)
     return None
 
